@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selsini Faranheytə çevirən əsrin çeviricisi!</title>
+</head>
+<body>
+	<form id="myForm">
+		<input type="number" placeholder="Selsini ver ginən!!!" id="celcius"><br><br>
+		<input type="number" placeholder="Faranheyti götür ginən)))" id="fahrenheit" disabled><br><br>
+		<input type="button" value="Çevir ginən" onclick="cTOf()">
+		<input type="reset" value="Clear" onclick="reset()">
+	</form>
+	<script>
+		var selsi = document.getElementById("celcius");
+		var faranheyt = document.getElementById("fahrenheit");
+
+		function cTOf(){
+			faranheyt.value=(1.8*selsi.value)+32
+			alert(selsi.value+' selsi '+faranheyt.value+' dir')
+		}
+		function reset(){
+			document.getElementById("myForm").reset();
+		}
+	</script>
+</body>
+</html>
